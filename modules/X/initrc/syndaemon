@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+#Syndaemon disables touchpad during typing
+syndaemon -t -k -i 0.8 -d
+

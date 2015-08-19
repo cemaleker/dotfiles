@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+exec i3 -V >> ~/.log/i3/$(date +'%F-%H-%M-%S') 2>&1
+

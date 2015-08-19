@@ -1,0 +1,4 @@
+! Disables Caps Lock and maps Caps Lock button as Mod4
+clear Lock
+keysym Caps_Lock = Hyper_L
+

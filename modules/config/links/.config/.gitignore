@@ -1,0 +1,6 @@
+*
+!.gitignore
+!termite/
+!i3/
+!i3status/
+!fontconfig/

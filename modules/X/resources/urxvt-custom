@@ -1,0 +1,7 @@
+URxvt.font: xft:DroidSansMono:pixelsize=12
+URxvt.letterSpace: -2
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+

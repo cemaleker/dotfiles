@@ -1,0 +1,7 @@
+[user]
+	email = cemaleker@gmail.com
+	name = Cemal Eker
+
+[core]
+  exludesFile = ~/.gitignore
+
