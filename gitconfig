@@ -1,0 +1,7 @@
+[push]
+	default = simple
+[user]
+	name = Cemal Eker
+	email = cemaleker@gmail.com
+[core]
+	excludesfile = /Users/cemaleker/.gitignore
