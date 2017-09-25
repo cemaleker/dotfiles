@@ -1,7 +1,11 @@
 [push]
 	default = simple
 [user]
+	signingkey = 8F33DB40F417F492
 	name = Cemal Eker
 	email = cemaleker@gmail.com
 [core]
 	excludesfile = /Users/cemaleker/.gitignore
+	editor = /usr/bin/vim
+[gpg]
+	program = gpg2
