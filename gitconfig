@@ -13,3 +13,9 @@
 
 [commit]
 	gpgsign = true
+[color]
+	ui = auto
+
+[pager]
+	diff = diff-so-fancy | less --tabs=2 -RFX
+	show = diff-so-fancy | less --tabs=2 -RFX
