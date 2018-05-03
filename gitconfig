@@ -1,0 +1,16 @@
+[core]
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+
+[user]
+  name = Cemal Eker
+  email = ce@idagio.com
+  signingkey = D1D8BE93F6431E45
+
+[diff "bin"]
+	textconv = hexdump -v -C
+
+[commit]
+
+[commit]
+	gpgsign = true
