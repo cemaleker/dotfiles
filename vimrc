@@ -13,7 +13,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-
 map ; :
 noremap ;; ;
+
+call plug#begin()
+Plug 'tpope/vim-sensible'
+call plug#end()
 
