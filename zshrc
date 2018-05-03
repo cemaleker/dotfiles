@@ -20,6 +20,5 @@ fi
 
 zplug load --verbose
 
-
 alias gpg="LANG=en gpg"
 
