@@ -1,6 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
+  editor = mvim -f --remote
 
 [user]
   name = Cemal Eker
@@ -9,8 +10,6 @@
 
 [diff "bin"]
 	textconv = hexdump -v -C
-
-[commit]
 
 [commit]
 	gpgsign = true
