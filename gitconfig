@@ -1,13 +1,8 @@
-[push]
-	default = simple
 [user]
 	signingkey = 8F33DB40F417F492
 	name = Cemal Eker
 	email = cemaleker@gmail.com
-[core]
-	excludesfile = ~/.gitignore
-	editor = /usr/bin/vim
-	ignorecase = false
-[gpg]
-	program = gpg2
+
+[include]
+    path = .dotfiles/common/gitconfig
 
