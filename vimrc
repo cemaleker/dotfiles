@@ -3,7 +3,6 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " Required:
 set runtimepath^=/Users/cemaleker/.dein.vim/repos/github.com/Shougo/dein.vim
 
@@ -32,6 +31,7 @@ call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('tpope/vim-vinegar')
 call dein#add('tpope/vim-obsession')
 call dein#add('mileszs/ack.vim')
+call dein#add('mhinz/vim-grepper')
 
 " Git
 call dein#add('tpope/vim-fugitive')
@@ -44,6 +44,9 @@ call dein#add('majutsushi/tagbar')
 call dein#add('Shougo/neocomplete.vim')
 call dein#add('sheerun/vim-polyglot')
 call dein#add('winstonwolff/ctags-javascript-coffeescript')
+
+" Format
+call dein#add('Chiel92/vim-autoformat')
 
 " Required:
 call dein#end()
@@ -160,7 +163,7 @@ endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " Close popup by <Space>.
-inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+inoremap <expr><Space> pumvisible() ? "\<C-y><Space>" : "\<Space>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -180,4 +183,32 @@ endif
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+
+" CtrlP Delete Buffer
+let g:ctrlp_buffer_func = { 'enter': 'CtrlPBDelete' }
+
+function! CtrlPBDelete()
+  nnoremap <buffer> <silent> <c-@> :call <sid>DeleteMarkedBuffers()<cr>
+endfunction
+
+function! s:DeleteMarkedBuffers()
+  " list all marked buffers
+  let marked = ctrlp#getmarkedlist()
+
+  " the file under the cursor is implicitly marked
+  if empty(marked)
+    call add(marked, fnamemodify(ctrlp#getcline(), ':p'))
+  endif
+
+  " call bdelete on all marked buffers
+  for fname in marked
+    let bufid = fname =~ '\[\d\+\*No Name\]$' ? str2nr(matchstr(fname, '\d\+'))
+          \ : fnamemodify(fname[2:], ':p')
+    exec "silent! bdelete" bufid
+  endfor
+
+  " refresh ctrlp
+  exec "normal \<F5>"
+endfunction
 

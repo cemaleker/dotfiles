@@ -5,7 +5,9 @@
 	name = Cemal Eker
 	email = cemaleker@gmail.com
 [core]
-	excludesfile = /Users/cemaleker/.gitignore
+	excludesfile = ~/.gitignore
 	editor = /usr/bin/vim
+	ignorecase = false
 [gpg]
 	program = gpg2
+
