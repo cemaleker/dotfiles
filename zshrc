@@ -4,8 +4,9 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
-zplug "lib/clipboard",	 from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "plugins/git",   from:oh-my-zsh
+zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/vi-mode", from:oh-my-zsh
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
@@ -17,8 +18,23 @@ if ! zplug check --verbose; then
     fi
 fi
 
-
 zplug load --verbose
 
+export GPG_TTY=$(tty)
 alias gpg="LANG=en gpg"
+
+
+##############################################################################
+# History Configuration
+##############################################################################
+HISTSIZE=5000               #How many lines of history to keep in memory
+HISTFILE=~/.zsh_history     #Where to save history to disk
+SAVEHIST=5000               #Number of history entries to save to disk
+HISTDUP=erase               #Erase duplicates in the history file
+setopt    appendhistory     #Append history to the history file (no overwriting)
+setopt    sharehistory      #Share history across terminals
+setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/cemaleker/src/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/cemaleker/src/google-cloud-sdk/path.zsh.inc'; fi
 

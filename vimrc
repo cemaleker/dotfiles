@@ -17,6 +17,10 @@ map ; :
 noremap ;; ;
 
 call plug#begin()
+
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-vinegar'
+Plug 'keith/swift.vim'
+
 call plug#end()
 
