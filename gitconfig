@@ -6,3 +6,10 @@
 [include]
   path = .dotfiles/common/gitconfig
 
+[interactive]
+    singleKey = true
+
+[alias]
+	add = add -p
+[credential]
+	helper = osxkeychain

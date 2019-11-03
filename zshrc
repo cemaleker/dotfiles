@@ -27,6 +27,7 @@ alias gpg="LANG=en gpg"
 ##############################################################################
 # History Configuration
 ##############################################################################
+HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 HISTSIZE=5000               #How many lines of history to keep in memory
 HISTFILE=~/.zsh_history     #Where to save history to disk
 SAVEHIST=5000               #Number of history entries to save to disk
@@ -38,3 +39,4 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/cemaleker/src/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/cemaleker/src/google-cloud-sdk/path.zsh.inc'; fi
 
+export PATH="/usr/local/opt/binutils/bin:$PATH"
