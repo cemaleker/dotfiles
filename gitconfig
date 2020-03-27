@@ -1,7 +1,7 @@
 [user]
   name = Cemal Eker
-  email = ce@idagio.com
-  signingkey = D1D8BE93F6431E45
+  email = cemaleker@gmail.com
+  signingkey = 8F33DB40F417F492
 
 [include]
   path = .dotfiles/common/gitconfig
