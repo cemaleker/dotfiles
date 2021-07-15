@@ -22,6 +22,8 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-vinegar'
 Plug 'keith/swift.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'vim-syntastic/syntastic'
+Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
 call plug#end()
